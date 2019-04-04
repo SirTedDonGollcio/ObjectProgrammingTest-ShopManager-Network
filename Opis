@@ -1,0 +1,6 @@
+Tworzymy klase obstrakcyjna Produkt(z poprzedniego Projrktu) ktory zwiera w sobie metody dotyczace jego podklas,
+a konkretnie np. cene i data przybycia do sklepu. Podklasami Produktu dziedziczace po tej klasie metedy moze byc np Rtv/Agd i Spozywcze.
+RTV/AGD nie posiada w przeciwienstwie do Spozywczych daty waznosci, poza tym posiada takie parametry jak koniecznosc podlaczenia do pradu, czy potrzeba baterii, iles letnia gwarancja.
+Spozywcze posiada data waznosci, a poza tym podklasa dziedziczaca po spozywczych to Owoce i warzywa, ktore poza parametrami rzeczy spozywczych posiadaja rowniez stopien dojrzalosci
+w skali od 1 do 10. Inne produkty nie dojrzewaja na bierzaco a te moga zarowno byc w roznych stanach jak i moga byc pozadane (np. bardziej zielone czy zolte banany).
+Poza tym w przeciwienstwie do normalnytch produktow moga byc sprzedawane na wage lub na sztuki, oraz mozliwosc bycia pakowanymi w folii lub bez.
