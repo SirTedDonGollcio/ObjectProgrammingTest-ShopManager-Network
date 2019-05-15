@@ -166,17 +166,7 @@ Spozywczy & Spozywczy::operator -- (int)
 
 std::ostream& operator << (std::ostream &ost, Spozywczy &spozywczy)
 {
-	ost << "Nazwa: " << spozywczy.nazwa << endl << "Jest z folia czy bezw: ";
-	if (spozywczy.zFoliaCzyBez)
-	{
-		ost << "Z\n";
-	}
-	else
-	{
-		ost << "Bez\n";
-	}
-
-	ost << "Cena: " << spozywczy.cena << endl << "Dni pozostale do zepsucia: " << spozywczy.dniDoZepsucia << endl;
+	ost << spozywczy.nazwa << endl << spozywczy.zFoliaCzyBez << endl << spozywczy.cena << endl << spozywczy.dniDoZepsucia << endl;
 	return ost;
 }
 
