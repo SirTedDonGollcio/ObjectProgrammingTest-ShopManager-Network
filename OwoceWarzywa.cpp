@@ -57,7 +57,7 @@ void OwoceWarzywa::wyswietl()
 
 std::ostream& operator << (std::ostream &ost, OwoceWarzywa &owoceWarzywa) 
 {
-	ost << "Nazwa: " << owoceWarzywa.nazwa << endl << "Jest z folia czy bezw: ";
+	/*ost << "Nazwa: " << owoceWarzywa.nazwa << endl << "Jest z folia czy bezw: ";
 	if (owoceWarzywa.zFoliaCzyBez)
 	{
 		ost << "Z\n";
@@ -68,12 +68,18 @@ std::ostream& operator << (std::ostream &ost, OwoceWarzywa &owoceWarzywa)
 	}
 
 	ost << "Cena: " << owoceWarzywa.cena << endl << "Dni pozostale do zepsucia: " << owoceWarzywa.dniDoZepsucia << endl << "Stopien Dojrzalosci: " << owoceWarzywa.stopienDojrzalosci << endl;
+	*/
+	//Spozywczy spozywczak;
+	ost << *dynamic_cast<Spozywczy*>(&owoceWarzywa);
+	ost << owoceWarzywa.stopienDojrzalosci << endl;
 	return ost;
 }
 
 std::istream& operator >> (std::istream& ist, OwoceWarzywa &owoceWarzywa)
 {
-	ist >> owoceWarzywa.nazwa >> owoceWarzywa.zFoliaCzyBez >> owoceWarzywa.cena >> owoceWarzywa.dniDoZepsucia >> owoceWarzywa.stopienDojrzalosci;
+	Spozywczy spozywczak;
+	ist >> *dynamic_cast<Spozywczy*>(&spozywczak);
+	ist >>  owoceWarzywa.stopienDojrzalosci;
 	return ist;
 }
 
