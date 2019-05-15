@@ -164,17 +164,7 @@ RTV & RTV::operator -- (int)
 
 std::ostream& operator << (std::ostream &ost, RTV &rtv)
 {
-	ost << "Nazwa: " << rtv.nazwa << endl << "Koniecznosc Podlaczenia do Pradu: ";
-	if (rtv.koniecnzoscPodlaczeniaDoPradu)
-	{
-		ost << "Tak\n";
-	}
-	else
-	{
-		ost << "Nie\n";
-	}
-
-	ost << "Ilosc Lat Gwarancji: " << rtv.lataGwarancji << endl << "Ilosc potrzebnych baterii: " << rtv.iloscBaterii << endl;
+	ost <<  rtv.nazwa << endl << rtv.koniecnzoscPodlaczeniaDoPradu << endl << rtv.lataGwarancji << endl <<  rtv.iloscBaterii << endl;;
 	return ost;
 }
 
